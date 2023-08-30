@@ -14,7 +14,7 @@ class GymTetrisObsWrapper(gym.ObservationWrapper):
     obs = obs[47:-33, 95:-81]
     #then scale by 8
     h, w = np.array(obs.shape[:2]) // 8
-    obs = resize(obs, (h, w), anti_aliasing=True)
+    obs = resize(obs, (h, w), anti_aliasing=False)
     #map to 0/1 range
     obs = (np.mean(obs, axis=-1) > 0.1).astype("float32")
     return obs

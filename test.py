@@ -19,6 +19,7 @@ while True:
         state = env.reset()
         done = False
     state, reward, done, info = env.step(env.action_space.sample())
+    env.render()
     cv2.imshow("img", state)
     cv2.waitKey(1)
 

@@ -6,7 +6,7 @@ setup(
     description="Wrapper for simpler gym-tetris observations",
     install_requires=[
       "gym-tetris",
-      "skimage",
+      "scikit-image",
       "gym<=0.18.3",
       "numpy"
     ],

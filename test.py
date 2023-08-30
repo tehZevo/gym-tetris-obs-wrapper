@@ -3,11 +3,11 @@ from nes_py.wrappers import JoypadSpace
 import gym_tetris
 from gym_tetris.actions import MOVEMENT
 
-from simple_tetris_board_wrapper import SimpleTetrisBoardWrapper
+from gym_tetris_obs_wrapper import GymTetrisObsWrapper
 
 env = gym_tetris.make('TetrisA-v0')
 env = JoypadSpace(env, MOVEMENT)
-env = SimpleTetrisBoardWrapper(env)
+env = GymTetrisObsWrapper(env)
 
 import cv2
 

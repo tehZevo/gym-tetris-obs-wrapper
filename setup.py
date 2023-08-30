@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="gym_tetris_obs_wrapper",
@@ -10,4 +10,5 @@ setup(
       "gym<=0.18.3",
       "numpy"
     ],
+    packages=find_packages()
 )
